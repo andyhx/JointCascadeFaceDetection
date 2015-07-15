@@ -72,6 +72,7 @@ public:
 extern Params global_params;
 extern cv::string modelPath;
 extern cv::string dataPath;
+
 class BoundingBox{
     public:
         double start_x;
