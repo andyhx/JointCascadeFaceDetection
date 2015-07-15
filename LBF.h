@@ -89,8 +89,7 @@ class BoundingBox{
             centroid_y = 0;
         }; 
 };
-cv::Mat_<double> GetMeanShape(const std::vector<cv::Mat_<double> >& shapes,
-                              const std::vector<BoundingBox>& bounding_box);
+cv::Mat_<double> GetMeanShape(const std::vector<TrainingSample>);
 
 void GetShapeResidual(const std::vector<cv::Mat_<double> >& ground_truth_shapes,
                       const std::vector<cv::Mat_<double> >& current_shapes,
