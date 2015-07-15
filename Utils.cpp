@@ -26,9 +26,7 @@
 using namespace std;
 using namespace cv;
 
-Mat_<double> GetMeanShape(const vector<Mat_<double> >& shapes,
-                          const vector<BoundingBox>& bounding_box,
-						  const vector<TrainingSample> samples){
+Mat_<double> GetMeanShape(const vector<TrainingSample> samples){
     Mat_<double> result = Mat::zeros(samples[0].ground_truth_shape.rows,2,CV_64FC1);
 	for (int i = 0; i < samples.size(); i++) {
 		if (samples[i].label == 1) {
@@ -41,7 +39,7 @@ Mat_<double> GetMeanShape(const vector<Mat_<double> >& shapes,
         result = result + ProjectShape(shapes[i],bounding_box[i]);
     }
 	*/
-    result = 1.0 / shapes.size() * result;
+    result = 1.0 / samples.size() * result;
     return result;
 }
 
