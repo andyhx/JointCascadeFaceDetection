@@ -104,9 +104,7 @@ double calculate_covariance(const std::vector<double>& v_1,
 void LoadData(std::string filepath,
               std::vector<TrainingSample> samples);
 void LoadOpencvBbxData(std::string filepath,
-                       std::vector<cv::Mat_<uchar> >& images,
-                       std::vector<cv::Mat_<double> >& ground_truth_shapes,
-                       std::vector<BoundingBox> & bounding_boxs
+                       std::vector<TrainingSample> sample
                        );
 
 void TrainDemo();
