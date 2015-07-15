@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="facedetect.cpp" />
+    <ClCompile Include="LBF.cpp" />
+    <ClCompile Include="LBFRegressor.cpp" />
+    <ClCompile Include="RandomForest.cpp" />
+    <ClCompile Include="TestDemo.cpp" />
+    <ClCompile Include="TrainDemo.cpp" />
+    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="linear.cpp" />
+    <ClCompile Include="tron.cpp" />
+    <ClCompile Include="daxpy.c" />
+    <ClCompile Include="ddot.c" />
+    <ClCompile Include="dnrm2.c" />
+    <ClCompile Include="dscal.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LBF.h" />
+    <ClInclude Include="LBFRegressor.h" />
+    <ClInclude Include="RandomForest.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="linear.h" />
+    <ClInclude Include="tron.h" />
+    <ClInclude Include="blas.h" />
+    <ClInclude Include="blasp.h" />
+  </ItemGroup>
+</Project>
