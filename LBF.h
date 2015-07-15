@@ -89,9 +89,9 @@ class BoundingBox{
             centroid_y = 0;
         }; 
 };
-cv::Mat_<double> GetMeanShape(const std::vector<TrainingSample>);
+cv::Mat_<double> GetMeanShape(const std::vector<TrainingSample> samples);
 
-void GetShapeResidual(const std::vector<TrainingSample>,
+void GetShapeResidual(const std::vector<TrainingSample> samples,
                       const cv::Mat_<double>& mean_shape
                       );
 
@@ -102,9 +102,7 @@ void SimilarityTransform(const cv::Mat_<double>& shape1, const cv::Mat_<double>&
 double calculate_covariance(const std::vector<double>& v_1,
                             const std::vector<double>& v_2);
 void LoadData(std::string filepath,
-              std::vector<cv::Mat_<uchar> >& images,
-              std::vector<cv::Mat_<double> >& ground_truth_shapes,
-              std::vector<BoundingBox> & bounding_box);
+              std::vector<TrainingSample> samples);
 void LoadOpencvBbxData(std::string filepath,
                        std::vector<cv::Mat_<uchar> >& images,
                        std::vector<cv::Mat_<double> >& ground_truth_shapes,
