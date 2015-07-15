@@ -91,11 +91,9 @@ class BoundingBox{
 };
 cv::Mat_<double> GetMeanShape(const std::vector<TrainingSample>);
 
-void GetShapeResidual(const std::vector<cv::Mat_<double> >& ground_truth_shapes,
-                      const std::vector<cv::Mat_<double> >& current_shapes,
-                      const std::vector<BoundingBox>& bounding_boxs,
-                      const cv::Mat_<double>& mean_shape,
-                      std::vector<cv::Mat_<double> >& shape_residuals);
+void GetShapeResidual(const std::vector<TrainingSample>,
+                      const cv::Mat_<double>& mean_shape
+                      );
 
 cv::Mat_<double> ProjectShape(const cv::Mat_<double>& shape, const BoundingBox& bounding_box);
 cv::Mat_<double> ReProjectShape(const cv::Mat_<double>& shape, const BoundingBox& bounding_box);
