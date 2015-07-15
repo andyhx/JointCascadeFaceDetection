@@ -58,6 +58,17 @@ struct Params{
     int max_numfeats[10]; // number of pixel pairs
     int max_numthreshs;
 };
+
+class TrainingSample {
+public:
+	cv::Mat_<uchar> image;
+	cv::Mat_<double> ground_truth_shape;
+	cv::Mat_<double> current_shape;
+	cv::Mat_<double> bounding_box;
+	cv::Mat_<double> shape_residual;
+	bool deleted;
+	int label;
+};
 extern Params global_params;
 extern cv::string modelPath;
 extern cv::string dataPath;
