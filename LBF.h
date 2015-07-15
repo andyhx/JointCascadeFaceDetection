@@ -64,7 +64,7 @@ public:
 	cv::Mat_<uchar> image;
 	cv::Mat_<double> ground_truth_shape;
 	cv::Mat_<double> current_shape;
-	cv::Mat_<double> bounding_box;
+	BoundingBox bounding_box;
 	cv::Mat_<double> shape_residual;
 	bool deleted;
 	int label;
